@@ -1,1 +1,27 @@
 https://kubernetes.io/docs/tutorials/kubernetes-basics/
+
+
+•	sudo service replicated stop 
+•	sudo service replicated-ui stop
+•	sudo service replicated-operator stop
+•	sudo docker rm -f replicated replicated-ui replicated-operator 
+•	sudo docker images | grep "quay\.io/replicated" | awk '{print $3}' | xargs sudo docker rmi -f
+•	sudo apt-get remove -y replicated replicated-ui replicated-operator --purge
+•	sudo apt-get purge -y replicated replicated-ui replicated-operator
+•	sudo rm -rf /var/lib/replicated* /etc/replicated* /etc/init/replicated* /etc/init.d/replicated* /etc/default/replicated* /var/log/upstart/replicated* /etc/systemd/system/replicated*
+•	sudo docker stop $(sudo docker ps -aq)
+•	sudo docker rm -f $(sudo docker ps -aq)
+•	sudo docker rmi -f $(sudo docker images -q)
+•	sudo apt-get remove docker docker-engine docker-ce docker.io -y --pruge
+•	sudo rm -rf /var/lib/docker
+
+•	sudo npm i npme -g --unsafe
+
+
+
+•	sudo service replicated restart
+•	sudo docker restart replicated
+•	sudo docker restart replicated-ui
+•	sudo docker restart replicated-operator
+
+
